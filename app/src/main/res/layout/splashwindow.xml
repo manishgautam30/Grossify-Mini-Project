@@ -12,15 +12,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="62dp"
-        android:layout_marginBottom="572dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginRight="151dp"
+        android:layout_marginBottom="571dp"
         android:text="@string/app_name"
         android:textColor="#000000"
         android:textSize="50sp"
-        android:textStyle="bold|italic"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="62dp" />
+        android:textStyle="bold|italic" />
 
     <TextView
         android:id="@+id/textView2"
@@ -44,12 +44,13 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="34dp"
         android:elegantTextHeight="false"
+        android:gravity="center_horizontal"
         android:text="Powered By: GLA University as Mini-Project"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="20dp"
-        app:autoSizeTextType="none"
-        android:gravity="center_horizontal" />
+        android:textStyle="bold|italic"
+        app:autoSizeTextType="none" />
 
     <TextView
         android:id="@+id/textView4"
@@ -57,9 +58,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="78dp"
+        android:gravity="center_horizontal"
         android:text="Developed By: Jatin,Manish,Nidhi,Radhika,Rahul"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="20dp"
-        android:gravity="center_horizontal" />
+        android:textStyle="bold|italic" />
 </RelativeLayout>
