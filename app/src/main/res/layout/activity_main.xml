@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/textke"
+    android:background="@drawable/mainabck"
     tools:context=".MainActivity">
 
 
@@ -15,11 +15,60 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="Daily Gross Items"
+        android:background="#090505"
+        android:text="Grossify"
         android:textColor="#FF0000"
-        android:textSize="25dp"
+        android:textSize="40dp"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/settings"
+        tools:layout_editor_absoluteX="341dp"
+        tools:layout_editor_absoluteY="29dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:drawableLeft="@android:drawable/ic_search_category_default"
+        android:drawablePadding="10px"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingLeft="20px"
+        android:paddingRight="40px"
+        android:text="@android:string/search_go"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="App to Shop olnline your daily needs "
+        android:textColor="#FFFF00"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#E8E7E3"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:srcCompat="@drawable/shopping"
+        tools:layout_editor_absoluteX="278dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
