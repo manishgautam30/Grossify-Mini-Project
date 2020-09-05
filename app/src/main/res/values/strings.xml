@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Grossify</string>
+    <string name="label">The Gross App</string>
+
 </resources>
