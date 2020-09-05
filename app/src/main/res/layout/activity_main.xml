@@ -54,10 +54,10 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="App to Shop olnline your daily needs "
+        android:text="@string/label"
         android:textColor="#FFFF00"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="@+id/textView5"
