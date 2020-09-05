@@ -43,7 +43,7 @@
         android:inputType="textPersonName"
         android:paddingLeft="20px"
         android:paddingRight="40px"
-        android:text="@android:string/search_go"
+        android:text="Search"
         android:textColor="#ffffff"
         android:textSize="25dp"
         android:textStyle="bold|italic"
