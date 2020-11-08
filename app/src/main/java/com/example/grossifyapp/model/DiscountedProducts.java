@@ -4,7 +4,7 @@ public class DiscountedProducts {
 
     Integer id;
     String imageurl;
-public DiscountedProducts(Integer id,String imageurl){
+public DiscountedProducts(Integer id, int imageurl){
     this.id = id;
     this.imageurl=imageurl;
     }
