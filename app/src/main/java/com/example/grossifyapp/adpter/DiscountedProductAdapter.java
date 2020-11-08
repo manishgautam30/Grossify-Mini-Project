@@ -22,8 +22,9 @@ public class DiscountedProductAdapter extends RecyclerView.Adapter<DiscountedPro
     List<DiscountedProducts> discountedProductsList;
     List dataList;
 
-    // meeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-    public DiscountedProductAdapter(Object context, List<DiscountedProducts> dataList) {
+
+    public DiscountedProductAdapter(Context context, List<DiscountedProducts> dataList) {
+        this.context= context;
         this.dataList=dataList;
     }
 
