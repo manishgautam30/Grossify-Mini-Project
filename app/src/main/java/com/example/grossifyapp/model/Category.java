@@ -1,14 +1,14 @@
 package com.example.grossifyapp.model;
 
-public class DiscountedProducts {
+public class Category {
 
     Integer id;
     Integer imageurl;
 
 
     public DiscountedProducts(Integer id, Integer imageurl){
-    this.id = id;
-    this.imageurl=imageurl;
+        this.id = id;
+        this.imageurl=imageurl;
     }
 
     public Integer getId() {
