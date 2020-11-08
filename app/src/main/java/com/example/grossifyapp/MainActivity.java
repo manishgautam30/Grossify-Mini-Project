@@ -29,14 +29,14 @@ public class MainActivity extends AppCompatActivity {
 
         discountedProductsList=new ArrayList<>();
         discountedProductsList.add(new DiscountedProducts(1,R.drawable.dis));
-        discountedProductsList.add(new DiscountedProducts(1,R.drawable.dis));
-        discountedProductsList.add(new DiscountedProducts(1,R.drawable.dis));
+        discountedProductsList.add(new DiscountedProducts(2, R.drawable.dis));
+        discountedProductsList.add(new DiscountedProducts(3,R.drawable.dis));
 
-        setDiscountedRecycler();
+        setDiscountedRecycler(discountedProductsList);
     }
 
 
-    private void setDiscountedRecycler(ArrayList<DiscountedProducts> dataList) {
+    private void setDiscountedRecycler(List<DiscountedProducts> dataList) {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
         discountRecyclerView.setLayoutManager(layoutManager);
         discountedProductAdapter = new DiscountedProductAdapter(this,dataList);

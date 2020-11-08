@@ -19,6 +19,7 @@ public class DiscountedProductAdapter extends RecyclerView.Adapter<DiscountedPro
     Context context;
 
     List<DiscountedProducts> discountedProductsList;
+    List dataList;
 
     @NonNull
     @Override
@@ -29,14 +30,14 @@ public class DiscountedProductAdapter extends RecyclerView.Adapter<DiscountedPro
 
     @Override
     public void onBindViewHolder(@NonNull DiscountedProductViewHolder holder, int position) {
-        holder.discountImageView.setImageResource(Integer.parseInt(discountedProductsList.get(position).getImageurl()));
+        holder.discountImageView.setImageResource(discountedProductsList.get(position).getImageurl());
 
     }
 
     @Override
     public int getItemCount() {
-        //return discountedProductsList.size();
-        return 5;
+        return discountedProductsList.size();
+
     }
 
     public static class DiscountedProductViewHolder extends RecyclerView.ViewHolder{

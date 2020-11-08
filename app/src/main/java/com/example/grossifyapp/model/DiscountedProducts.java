@@ -3,8 +3,8 @@ package com.example.grossifyapp.model;
 public class DiscountedProducts {
 
     Integer id;
-    String imageurl;
-public DiscountedProducts(Integer id, int imageurl){
+    Integer imageurl;
+public DiscountedProducts(Integer id, Integer imageurl){
     this.id = id;
     this.imageurl=imageurl;
     }
@@ -17,11 +17,11 @@ public DiscountedProducts(Integer id, int imageurl){
         this.id = id;
     }
 
-    public String getImageurl() {
+    public Integer getImageurl() {
         return imageurl;
     }
 
-    public void setImageurl(String imageurl) {
+    public void setImageurl(Integer imageurl) {
         this.imageurl = imageurl;
     }
 }
