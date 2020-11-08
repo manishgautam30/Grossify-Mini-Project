@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.grossifyapp.MainActivity;
 import com.example.grossifyapp.R;
 import com.example.grossifyapp.model.DiscountedProducts;
 
@@ -20,6 +21,12 @@ public class DiscountedProductAdapter extends RecyclerView.Adapter<DiscountedPro
 
     List<DiscountedProducts> discountedProductsList;
     List dataList;
+
+    // meeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+    public DiscountedProductAdapter(Object context, List<DiscountedProducts> dataList) {
+        this.dataList=dataList;
+    }
+
 
     @NonNull
     @Override
