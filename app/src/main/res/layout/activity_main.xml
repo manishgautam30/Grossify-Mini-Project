@@ -2,9 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/discountedRecycler"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mainabck"
     tools:context=".MainActivity">
 
 
@@ -34,9 +34,11 @@
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
+        android:background="@android:color/white"
         android:drawableLeft="@android:drawable/ic_search_category_default"
         android:drawablePadding="10px"
         android:ems="10"
@@ -44,11 +46,11 @@
         android:paddingLeft="20px"
         android:paddingRight="40px"
         android:text="Search"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textSize="25dp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -58,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/label"
-        android:textColor="#FFFF00"
+        android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -71,4 +73,28 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:srcCompat="@drawable/shopping"
         tools:layout_editor_absoluteX="278dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Top Discounted Items"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        app:fontFamily="sans-serif"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
