@@ -1,10 +1,12 @@
 package com.example.grossifyapp;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -24,12 +26,25 @@ public class AllCategory extends AppCompatActivity {
     AllCategoryAdapter allCategoryAdapter;
     List<AllCategoryModal> allCategoryModalList;
 
+    ImageView back;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_category);
 
         AllCategoryRecycler = findViewById(R.id.all_Category);
+        back = findViewById(R.id.back);
+
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent back = new Intent(AllCategory.this, MainActivity.class);
+                startActivity(back);
+                finish();
+            }
+        });
 
         //adding data to model
         allCategoryModalList =new ArrayList<>();
