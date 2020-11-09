@@ -32,7 +32,13 @@ public class ProductDetails extends AppCompatActivity {
         qty = i.getStringExtra("qty");
         unit = i.getStringExtra("unit");
 
-
+        proName = findViewById(R.id.productName);
+        proDesc = findViewById(R.id.prodDesc);
+        proPrice = findViewById(R.id.prodPrice);
+        img = findViewById(R.id.big_image);
+        back = findViewById(R.id.back2);
+        proQty = findViewById(R.id.qty);
+        proUnit = findViewById(R.id.unit);
 
         proName.setText(name);
         proPrice.setText(price);
