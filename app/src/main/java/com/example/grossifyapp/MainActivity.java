@@ -96,4 +96,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     // a new adapter class for the recently viewed section
+    private void setRecentlyViewedRecycler(List<RecentlyViewed> recentlyViewedDataList) {
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recentlyViewedRecycler.setLayoutManager(layoutManager);
+        recentlyViewedAdapter = new RecentlyViewedAdapter(this,recentlyViewedDataList);
+        recentlyViewedRecycler.setAdapter(recentlyViewedAdapter);
+    }
 }
