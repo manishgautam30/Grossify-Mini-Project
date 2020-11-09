@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -33,6 +34,27 @@ public class ProductDetails extends AppCompatActivity {
 
 
 
+        proName.setText(name);
+        proPrice.setText(price);
+        proDesc.setText(desc);
+        proQty.setText(qty);
+        proUnit.setText(unit);
+
+
+
+        img.setImageResource(image);
+
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(ProductDetails.this, MainActivity.class);
+                startActivity(i);
+                finish();
+
+            }
+        });
 
 
 

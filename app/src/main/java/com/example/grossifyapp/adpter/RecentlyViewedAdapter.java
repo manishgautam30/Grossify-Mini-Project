@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.grossifyapp.ProductDetails;
 import com.example.grossifyapp.R;
 import com.example.grossifyapp.model.RecentlyViewed;
 
