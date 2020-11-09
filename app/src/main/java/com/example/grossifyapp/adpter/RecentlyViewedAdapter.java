@@ -1,7 +1,7 @@
 package com.example.grossifyapp.adpter;
 
 import android.content.Context;
-import android.view.ViewGroup;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.grossifyapp.model.RecentlyViewed;
 
 import java.util.List;
+
 
 public class RecentlyViewedAdapter extends RecyclerView.Adapter<RecentlyViewedAdapter.RecentlyViewedViewHolder> {
 
@@ -20,19 +21,10 @@ public class RecentlyViewedAdapter extends RecyclerView.Adapter<RecentlyViewedAd
         this.recentlyViewedList = recentlyViewedList;
     }
 
-    @NonNull
-    @Override
-    public RecentlyViewedAdapter.RecentlyViewedViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
-    }
+   public static class RecentlyViewedHolder extends RecyclerView.ViewHolder{
+        public RecentlyViewedHolder(@NonNull View itemView){
+            super(itemView);
+        }
+   }
 
-    @Override
-    public void onBindViewHolder(@NonNull RecentlyViewedAdapter.RecentlyViewedViewHolder holder, int position) {
-
-    }
-
-    @Override
-    public int getItemCount() {
-        return 0;
-    }
 }
