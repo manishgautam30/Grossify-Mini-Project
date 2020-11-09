@@ -1,7 +1,9 @@
 package com.example.grossifyapp.adpter;
 
 import android.content.Context;
+import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.grossifyapp.model.RecentlyViewed;
@@ -18,4 +20,19 @@ public class RecentlyViewedAdapter extends RecyclerView.Adapter<RecentlyViewedAd
         this.recentlyViewedList = recentlyViewedList;
     }
 
+    @NonNull
+    @Override
+    public RecentlyViewedAdapter.RecentlyViewedViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return null;
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull RecentlyViewedAdapter.RecentlyViewedViewHolder holder, int position) {
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return 0;
+    }
 }
