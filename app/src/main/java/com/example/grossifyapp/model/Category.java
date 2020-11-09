@@ -1,15 +1,15 @@
 package com.example.grossifyapp.model;
 
-public class AllCategoryModal {
+public class Category {
 
     Integer id;
     Integer imageurl;
 
-
-    public  Category(Integer id, Integer imageurl){
+    public Category(Integer id, Integer imageurl) {
         this.id = id;
         this.imageurl=imageurl;
     }
+
 
     public Integer getId() {
         return id;

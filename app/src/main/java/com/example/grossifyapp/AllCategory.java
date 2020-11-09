@@ -3,6 +3,7 @@ package com.example.grossifyapp;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,11 +24,11 @@ public class AllCategory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_category);
 
-        AllCategoryRecycler = findViewById(R.id.allCategory);
+        AllCategoryRecycler = findViewById(R.id.all_Category);
 
         //adding data to model
         allCategoryModalList =new ArrayList<>();
-        allCategoryModalList.add(new AllCategoryModal(1, R.drawable.ic_baseline_fiber_manual_record_24));
+        allCategoryModalList.add(new AllCategoryModal(1,R.drawable.ic_baseline_fiber_manual_record_24));
         allCategoryModalList.add(new AllCategoryModal(2,R.drawable.ic_baseline_fiber_manual_record_24));
         allCategoryModalList.add(new AllCategoryModal(3,R.drawable.ic_baseline_fiber_manual_record_24));
         allCategoryModalList.add(new AllCategoryModal(4,R.drawable.ic_baseline_fiber_manual_record_24));
@@ -40,10 +41,13 @@ public class AllCategory extends AppCompatActivity {
 
     }
 
+    private void AllCategoryRecycler(List<AllCategoryModal> allCategoryModalList) {
+    }
 
 
     private void setCategoryRecycler(List<AllCategoryModal> allcategoryModalList) {
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false);
+
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 3);
         AllCategoryRecycler.setLayoutManager(layoutManager);
         allCategoryAdapter=new AllCategoryAdapter(this,allcategoryModalList);
         AllCategoryRecycler.setAdapter(allCategoryAdapter);
