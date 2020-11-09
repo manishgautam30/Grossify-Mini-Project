@@ -11,7 +11,7 @@ public class RecentlyViewed {
 
 
     public RecentlyViewed(String name, String description, String price, String quantity, String unit, int card4, int
-            imageUrl) {
+            imageUrl,int bigimageurl) {
         this.name = name;
         this.description = description;
         this.price = price;

@@ -75,10 +75,10 @@ public class MainActivity extends AppCompatActivity {
 
         // adding data to model
         recentlyViewedList = new ArrayList<>();
-        recentlyViewedList.add(new RecentlyViewed("Watermelon", "Watermelon has high water content and also provides some fiber.", "₹ 80", "1", "KG", R.drawable.card4, R.drawable.b4));
-        recentlyViewedList.add(new RecentlyViewed("Papaya", "Papayas are spherical/pear-shaped fruits that can be 20 inches long.", "₹ 85", "1", "KG", R.drawable.card3, R.drawable.b3));
-        recentlyViewedList.add(new RecentlyViewed("Strawberry", "The strawberry is a highly nutritious fruit, loaded with vitamin C.", "₹ 30", "1", "KG", R.drawable.card2, R.drawable.b1));
-        recentlyViewedList.add(new RecentlyViewed("Kiwi", "Full of nutrients like vitamin C, vitamin K, vitamin E, folate, and potassium.", "₹ 30", "1", "PC", R.drawable.card1, R.drawable.b2));
+        recentlyViewedList.add(new RecentlyViewed("Watermelon", "Watermelon has high water content and also provides some fiber.", "₹ 80", "1", "KG", R.drawable.card4, R.drawable.b4,R.drawable.b4));
+        recentlyViewedList.add(new RecentlyViewed("Papaya", "Papayas are spherical/pear-shaped fruits that can be 20 inches long.", "₹ 85", "1", "KG", R.drawable.card3, R.drawable.b3,R.drawable.b3));
+        recentlyViewedList.add(new RecentlyViewed("Strawberry", "The strawberry is a highly nutritious fruit, loaded with vitamin C.", "₹ 30", "1", "KG", R.drawable.card2, R.drawable.b1,R.drawable.b1));
+        recentlyViewedList.add(new RecentlyViewed("Kiwi", "Full of nutrients like vitamin C, vitamin K, vitamin E, folate, and potassium.", "₹ 30", "1", "PC", R.drawable.card1, R.drawable.b2,R.drawable.b2));
 
         setDiscountedRecycler(discountedProductsList);
         setCategoryRecycler(categoryList);
