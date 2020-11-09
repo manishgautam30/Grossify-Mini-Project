@@ -58,6 +58,11 @@ public class AllCategory extends AppCompatActivity {
         private int spacing;
         private boolean includeEdge;
 
+      public void GridSpacingItemDecoration (int spanCount,int spacing ,boolean includeEdge){
+          this.spanCount=spanCount;
+          this.spacing=spacing;
+          this.includeEdge=includeEdge;
+      }
 
 
     }
