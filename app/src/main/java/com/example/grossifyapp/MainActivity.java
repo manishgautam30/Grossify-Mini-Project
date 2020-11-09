@@ -84,4 +84,7 @@ public class MainActivity extends AppCompatActivity {
         categoryAdapter=new CategoryAdapter(this,CategoryDataList);
         categoryRecyclerView.setAdapter(categoryAdapter);
     }
+
+
+    // a new adapter class for the recently viewed section
 }
