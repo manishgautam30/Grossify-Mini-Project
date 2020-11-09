@@ -1,6 +1,7 @@
 package com.example.grossifyapp.adpter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,30 @@ public class RecentlyViewedAdapter extends RecyclerView.Adapter<RecentlyViewedAd
 
 
     public void onBindViewHolder(@NonNull RecentlyViewedViewHolder holder, int position) {
+
+        holder.name.setText(recentlyViewedList.get(position).getName());
+        holder.description.setText(recentlyViewedList.get(position).getDescription());
+        holder.price.setText(recentlyViewedList.get(position).getPrice());
+        holder.qty.setText(recentlyViewedList.get(position).getQuantity());
+        holder.unit.setText(recentlyViewedList.get(position).getUnit());
+        holder.bg.setBackgroundResource(recentlyViewedList.get(position).getImageUrl());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i=new Intent(context, ProductDetails.class);
+                i.putExtra("name", recentlyViewedList.get(position).getName());
+                i.putExtra("image", recentlyViewedList.get(position).getBigimageurl());
+                i.putExtra("price",recentlyViewedList.get(position).getPrice());
+                i.putExtra("desc",recentlyViewedList.get(position).getDescription());
+                i.putExtra("qty",recentlyViewedList.get(position).getQuantity());
+                i.putExtra("unit",recentlyViewedList.get(position).getUnit());
+
+                context.startActivity(i);
+
+            }
+        });
 
     }
 

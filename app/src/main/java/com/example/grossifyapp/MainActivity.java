@@ -8,25 +8,32 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.grossifyapp.adpter.CategoryAdapter;
 import com.example.grossifyapp.adpter.DiscountedProductAdapter;
+import com.example.grossifyapp.adpter.RecentlyViewedAdapter;
 import com.example.grossifyapp.model.Category;
 import com.example.grossifyapp.model.DiscountedProducts;
+import com.example.grossifyapp.model.RecentlyViewed;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    RecyclerView discountRecyclerView,categoryRecyclerView;
+    RecyclerView discountRecyclerView,categoryRecyclerView, recentlyViewedRecycler;
     DiscountedProductAdapter discountedProductAdapter;
     List<DiscountedProducts> discountedProductsList;
 
     CategoryAdapter categoryAdapter;
     List<Category> categoryList;
 
-    ImageView allCategory;
+    RecentlyViewedAdapter recentlyViewedAdapter;
+    List<RecentlyViewed> recentlyViewedList;
+
+    TextView allCategory;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         discountRecyclerView = findViewById(R.id.discountedRecycler);
         categoryRecyclerView = findViewById(R.id.categoryRecycler);
         allCategory = findViewById(R.id.allCategoryImage);
+        recentlyViewedRecycler = findViewById(R.id.recently_item);
+
 
         allCategory.setOnClickListener(new View.OnClickListener() {
             @Override
