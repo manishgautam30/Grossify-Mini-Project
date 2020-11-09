@@ -1,7 +1,9 @@
 package com.example.grossifyapp;
 
+import android.content.res.Resources;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -94,5 +96,10 @@ public class AllCategory extends AppCompatActivity {
     /**
      * Converting dp to pixel
      */
+    private int dpToPx(int dp) {
+        Resources r = getResources();
+        return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
+    }
+
 
 }
