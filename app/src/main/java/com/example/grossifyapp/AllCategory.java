@@ -52,4 +52,13 @@ public class AllCategory extends AppCompatActivity {
         allCategoryAdapter=new AllCategoryAdapter(this,allcategoryModalList);
         AllCategoryRecycler.setAdapter(allCategoryAdapter);
     }
+
+    public class GridSpacingItemDecoration extends RecyclerView.ItemDecoration{
+        private int spanCount;
+        private int spacing;
+        private boolean includeEdge;
+
+
+
+    }
 }
