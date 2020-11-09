@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
         setDiscountedRecycler(discountedProductsList);
         setCategoryRecycler(categoryList);
+        setRecentlyViewedRecycler(recentlyViewedList);
     }
 
 
