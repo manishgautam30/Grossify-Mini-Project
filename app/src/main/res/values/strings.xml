@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">OnlineDailyGroceries</string>
+    <string name="app_name">Grossify</string>
+    <string name="label">The Gross App to Shop olnline your daily needs </string>
+
 </resources>
