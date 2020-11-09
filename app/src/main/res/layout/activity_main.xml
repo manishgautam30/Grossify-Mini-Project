@@ -133,4 +133,12 @@
         app:layout_constraintTop_toTopOf="@+id/textView8"
         app:srcCompat="@android:drawable/ic_menu_preferences" />
 
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recently Viewed Items"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="601dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
