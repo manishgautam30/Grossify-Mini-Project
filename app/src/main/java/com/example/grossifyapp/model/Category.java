@@ -1,6 +1,6 @@
 package com.example.grossifyapp.model;
 
-public class Category {
+public class AllCategoryModal {
 
     Integer id;
     Integer imageurl;

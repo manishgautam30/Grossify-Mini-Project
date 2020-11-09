@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.grossifyapp.R;
 import com.example.grossifyapp.model.Category;
-import com.example.grossifyapp.model.DiscountedProducts;
 
 import java.util.List;
 

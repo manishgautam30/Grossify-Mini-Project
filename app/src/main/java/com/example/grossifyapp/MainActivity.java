@@ -1,12 +1,10 @@
 package com.example.grossifyapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.content.LocusId;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;

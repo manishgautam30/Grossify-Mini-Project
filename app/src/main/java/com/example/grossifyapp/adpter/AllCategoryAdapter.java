@@ -9,17 +9,18 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.grossifyapp.AllCategory;
 import com.example.grossifyapp.R;
-import com.example.grossifyapp.model.Category;
+import com.example.grossifyapp.model.AllCategoryModal;
 
 import java.util.List;
 
 public class AllCategoryAdapter extends RecyclerView.Adapter<AllCategoryAdapter.AllCategoryViewHolder> {
 
     Context context;
-    List<Category> categoryList;
+    List<AllCategoryModal> categoryList;
 
-    public AllCategoryAdapter(Context context, List<Category> categoryList) {
+    public AllCategoryAdapter(Context context, List<AllCategoryModal> categoryList) {
         this.context= context;
         this.categoryList=categoryList;
     }
