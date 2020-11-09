@@ -22,12 +22,10 @@ public class DiscountedProductAdapter extends RecyclerView.Adapter<DiscountedPro
     List<DiscountedProducts> discountedProductsList;
     List dataList;
 
-
     public DiscountedProductAdapter(Context context, List<DiscountedProducts> dataList) {
         this.context= context;
         this.dataList=dataList;
     }
-
 
     @NonNull
     @Override
