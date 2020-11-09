@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AllCategory"></activity>
+        <activity android:name=".ProductDetails"></activity>
+        <activity android:name=".AllCategory" />
         <activity android:name=".splash_window">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
