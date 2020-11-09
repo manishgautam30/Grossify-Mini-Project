@@ -14,7 +14,7 @@ import com.example.grossifyapp.model.Category;
 
 import java.util.List;
 
-public class AllCategoryAdapter extends RecyclerView.Adapter<AllCategoryAdapter.CategoryViewHolder> {
+public class AllCategoryAdapter extends RecyclerView.Adapter<AllCategoryAdapter.AllCategoryViewHolder> {
 
     Context context;
     List<Category> categoryList;
@@ -26,14 +26,14 @@ public class AllCategoryAdapter extends RecyclerView.Adapter<AllCategoryAdapter.
 
     @NonNull
     @Override
-    public CategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.category_row_items,parent,false);
-        return new CategoryViewHolder(view);
+    public AllCategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.all_category_row_items,parent,false);
+        return new AllCategoryViewHolder(view);
     }
 
 
     @Override
-    public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull AllCategoryViewHolder holder, int position) {
 
         holder.categoryImage.setImageResource(categoryList.get(position).getImageurl());
 
@@ -44,11 +44,11 @@ public class AllCategoryAdapter extends RecyclerView.Adapter<AllCategoryAdapter.
         return categoryList.size();
     }
 
-    public static class CategoryViewHolder extends RecyclerView.ViewHolder{
+    public static class AllCategoryViewHolder extends RecyclerView.ViewHolder{
 
         ImageView categoryImage;
 
-        public CategoryViewHolder(@NonNull View itemView) {
+        public AllCategoryViewHolder(@NonNull View itemView) {
             super(itemView);
 
             categoryImage = itemView.findViewById(R.id.categoryImage);
