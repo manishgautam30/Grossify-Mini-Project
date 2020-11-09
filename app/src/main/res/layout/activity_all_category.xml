@@ -28,4 +28,10 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp"
         tools:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="391dp"
+        android:layout_height="719dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="65dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
