@@ -17,7 +17,6 @@ import com.example.grossifyapp.model.RecentlyViewed;
 
 import java.util.List;
 
-
 public class RecentlyViewedAdapter extends RecyclerView.Adapter<RecentlyViewedAdapter.RecentlyViewedViewHolder> {
 
     Context context;
@@ -31,14 +30,13 @@ public class RecentlyViewedAdapter extends RecyclerView.Adapter<RecentlyViewedAd
     @NonNull
     @Override
     public RecentlyViewedViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.recently_viewed_items,parent,false);
-
+        View view = LayoutInflater.from(context).inflate(R.layout.recently_viewed_items, parent, false);
 
         return new RecentlyViewedViewHolder(view);
     }
 
-
-    public void onBindViewHolder(@NonNull RecentlyViewedViewHolder holder, int position) {
+    @Override
+    public void onBindViewHolder(@NonNull RecentlyViewedViewHolder holder, final int position) {
 
         holder.name.setText(recentlyViewedList.get(position).getName());
         holder.description.setText(recentlyViewedList.get(position).getDescription());
@@ -71,12 +69,12 @@ public class RecentlyViewedAdapter extends RecyclerView.Adapter<RecentlyViewedAd
         return recentlyViewedList.size();
     }
 
-    public static class RecentlyViewedViewHolder extends RecyclerView.ViewHolder{
+    public  static class RecentlyViewedViewHolder extends RecyclerView.ViewHolder{
 
         TextView name, description, price, qty, unit;
         ConstraintLayout bg;
 
-        public RecentlyViewedViewHolder(@NonNull View itemView){
+        public RecentlyViewedViewHolder(@NonNull View itemView) {
             super(itemView);
 
             name = itemView.findViewById(R.id.product_name);
@@ -85,7 +83,8 @@ public class RecentlyViewedAdapter extends RecyclerView.Adapter<RecentlyViewedAd
             qty = itemView.findViewById(R.id.qty);
             unit = itemView.findViewById(R.id.unit);
             bg = itemView.findViewById(R.id.recently_layout);
+
         }
-   }
+    }
 
 }

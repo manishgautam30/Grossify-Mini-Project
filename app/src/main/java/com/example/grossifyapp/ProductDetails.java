@@ -10,13 +10,11 @@ import android.widget.TextView;
 
 public class ProductDetails extends AppCompatActivity {
 
-
     ImageView img, back;
     TextView proName, proPrice, proDesc, proQty, proUnit;
 
     String name, price, desc, qty, unit;
     int image;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +45,6 @@ public class ProductDetails extends AppCompatActivity {
         proUnit.setText(unit);
 
 
-
         img.setImageResource(image);
 
 
@@ -62,9 +59,7 @@ public class ProductDetails extends AppCompatActivity {
             }
         });
 
-
-
-
-
     }
+
+
 }

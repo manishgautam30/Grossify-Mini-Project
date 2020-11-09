@@ -20,14 +20,16 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     List<Category> categoryList;
 
     public CategoryAdapter(Context context, List<Category> categoryList) {
-        this.context= context;
-        this.categoryList=categoryList;
+        this.context = context;
+        this.categoryList = categoryList;
     }
 
     @NonNull
     @Override
     public CategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.category_row_items,parent,false);
+
+        View view = LayoutInflater.from(context).inflate(R.layout.category_row_items, parent, false);
+
         return new CategoryViewHolder(view);
     }
 
@@ -43,7 +45,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         return categoryList.size();
     }
 
-    public static class CategoryViewHolder extends RecyclerView.ViewHolder{
+    public  static class CategoryViewHolder extends RecyclerView.ViewHolder{
 
         ImageView categoryImage;
 
@@ -51,9 +53,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
             super(itemView);
 
             categoryImage = itemView.findViewById(R.id.categoryImage);
+
         }
     }
+
 }
-
-
 

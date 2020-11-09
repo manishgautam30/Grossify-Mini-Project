@@ -7,6 +7,8 @@ public class RecentlyViewed {
     String quantity;
     String unit;
     int imageUrl;
+    int bigimageurl;
+
 
     public RecentlyViewed(String name, String description, String price, String quantity, String unit, int card4, int
             imageUrl) {
@@ -16,6 +18,16 @@ public class RecentlyViewed {
         this.quantity = quantity;
         this.unit = unit;
         this.imageUrl = imageUrl;
+        this.bigimageurl = bigimageurl;
+
+    }
+
+    public int getBigimageurl() {
+        return bigimageurl;
+    }
+
+    public void setBigimageurl(int bigimageurl) {
+        this.bigimageurl = bigimageurl;
     }
 
     public String getName() {
@@ -65,6 +77,7 @@ public class RecentlyViewed {
     public void setImageUrl(int imageUrl) {
         this.imageUrl = imageUrl;
     }
+
 
 
 }

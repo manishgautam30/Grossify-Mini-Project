@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.grossifyapp.AllCategory;
 import com.example.grossifyapp.R;
 import com.example.grossifyapp.model.AllCategoryModal;
 
@@ -21,17 +20,18 @@ public class AllCategoryAdapter extends RecyclerView.Adapter<AllCategoryAdapter.
     List<AllCategoryModal> categoryList;
 
     public AllCategoryAdapter(Context context, List<AllCategoryModal> categoryList) {
-        this.context= context;
-        this.categoryList=categoryList;
+        this.context = context;
+        this.categoryList = categoryList;
     }
 
     @NonNull
     @Override
     public AllCategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.all_category_row_items,parent,false);
+
+        View view = LayoutInflater.from(context).inflate(R.layout.all_category_row_items, parent, false);
+
         return new AllCategoryViewHolder(view);
     }
-
 
     @Override
     public void onBindViewHolder(@NonNull AllCategoryViewHolder holder, int position) {
@@ -45,7 +45,7 @@ public class AllCategoryAdapter extends RecyclerView.Adapter<AllCategoryAdapter.
         return categoryList.size();
     }
 
-    public static class AllCategoryViewHolder extends RecyclerView.ViewHolder{
+    public  static class AllCategoryViewHolder extends RecyclerView.ViewHolder{
 
         ImageView categoryImage;
 
@@ -53,9 +53,8 @@ public class AllCategoryAdapter extends RecyclerView.Adapter<AllCategoryAdapter.
             super(itemView);
 
             categoryImage = itemView.findViewById(R.id.categoryImage);
+
         }
     }
+
 }
-
-
-

@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.grossifyapp.adpter.AllCategoryAdapter;
-import com.example.grossifyapp.model.AllCategoryModal;
+import com.example.grossifyapp.model.AllCategoryModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +24,7 @@ public class AllCategory extends AppCompatActivity {
 
     RecyclerView AllCategoryRecycler;
     AllCategoryAdapter allCategoryAdapter;
-    List<AllCategoryModal> allCategoryModalList;
+    List<AllCategoryModel> allCategoryModelList;
 
     ImageView back;
 
@@ -33,7 +33,7 @@ public class AllCategory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_category);
 
-        AllCategoryRecycler = findViewById(R.id.all_Category);
+        AllCategoryRecycler = findViewById(R.id.all_category);
         back = findViewById(R.id.back);
 
 
@@ -46,50 +46,49 @@ public class AllCategory extends AppCompatActivity {
             }
         });
 
-        //adding data to model
-        allCategoryModalList =new ArrayList<>();
-        allCategoryModalList.add(new AllCategoryModal(1,R.drawable.ic_baseline_fiber_manual_record_24));
-        allCategoryModalList.add(new AllCategoryModal(2,R.drawable.ic_baseline_fiber_manual_record_24));
-        allCategoryModalList.add(new AllCategoryModal(3,R.drawable.ic_baseline_fiber_manual_record_24));
-        allCategoryModalList.add(new AllCategoryModal(4,R.drawable.ic_baseline_fiber_manual_record_24));
-        allCategoryModalList.add(new AllCategoryModal(5,R.drawable.ic_baseline_fiber_manual_record_24));
-        allCategoryModalList.add(new AllCategoryModal(6,R.drawable.ic_baseline_fiber_manual_record_24));
-        allCategoryModalList.add(new AllCategoryModal(7,R.drawable.ic_baseline_fiber_manual_record_24));
+
+        // adding data to model
+        allCategoryModelList = new ArrayList<>();
+        allCategoryModelList.add(new AllCategoryModel(1, R.drawable.ic_fruits));
+        allCategoryModelList.add(new AllCategoryModel(2, R.drawable.ic_veggies));
+        allCategoryModelList.add(new AllCategoryModel(3, R.drawable.ic_meat));
+        allCategoryModelList.add(new AllCategoryModel(4, R.drawable.ic_fish));
+        allCategoryModelList.add(new AllCategoryModel(5, R.drawable.ic_spices));
+        allCategoryModelList.add(new AllCategoryModel(6, R.drawable.ic_egg));
+        allCategoryModelList.add(new AllCategoryModel(7, R.drawable.ic_drink));
+        allCategoryModelList.add(new AllCategoryModel(8, R.drawable.ic_cookies));
+        allCategoryModelList.add(new AllCategoryModel(8, R.drawable.ic_juce));
 
 
-        AllCategoryRecycler(allCategoryModalList);
+        setCategoryRecycler(allCategoryModelList);
 
     }
 
-    private void AllCategoryRecycler(List<AllCategoryModal> allCategoryModalList) {
-        this.allCategoryModalList=allCategoryModalList;
-    }
-
-
-    private void setCategoryRecycler(List<AllCategoryModal> allcategoryModalList) {
-
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 3);
+    private void setCategoryRecycler(List<AllCategoryModel> allcategoryModelList) {
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 4);
         AllCategoryRecycler.setLayoutManager(layoutManager);
         AllCategoryRecycler.addItemDecoration(new GridSpacingItemDecoration(4, dpToPx(16), true));
         AllCategoryRecycler.setItemAnimator(new DefaultItemAnimator());
-        allCategoryAdapter=new AllCategoryAdapter(this,allcategoryModalList);
+        allCategoryAdapter = new AllCategoryAdapter(this,allcategoryModelList);
         AllCategoryRecycler.setAdapter(allCategoryAdapter);
     }
 
-    public class GridSpacingItemDecoration extends RecyclerView.ItemDecoration{
+    // now we need some item decoration class for manage spacing
+
+    public class GridSpacingItemDecoration extends RecyclerView.ItemDecoration {
+
         private int spanCount;
         private int spacing;
         private boolean includeEdge;
 
+        public GridSpacingItemDecoration(int spanCount, int spacing, boolean includeEdge) {
+            this.spanCount = spanCount;
+            this.spacing = spacing;
+            this.includeEdge = includeEdge;
+        }
 
-
-        public GridSpacingItemDecoration(int spanCount,int spacing ,boolean includeEdge){
-          this.spanCount=spanCount;
-          this.spacing=spacing;
-          this.includeEdge=includeEdge;
-      }
-
-      public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+        @Override
+        public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
             int position = parent.getChildAdapterPosition(view); // item position
             int column = position % spanCount; // item column
 
@@ -101,17 +100,14 @@ public class AllCategory extends AppCompatActivity {
                     outRect.top = spacing;
                 }
                 outRect.bottom = spacing; // item bottom
-            }
-            else
-                {
+            } else {
                 outRect.left = column * spacing / spanCount; // column * ((1f / spanCount) * spacing)
                 outRect.right = spacing - (column + 1) * spacing / spanCount; // spacing - (column + 1) * ((1f /    spanCount) * spacing)
                 if (position >= spanCount) {
                     outRect.top = spacing; // item top
                 }
             }
-      }
-
+        }
     }
 
     /**
@@ -121,6 +117,6 @@ public class AllCategory extends AppCompatActivity {
         Resources r = getResources();
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
     }
-
-
 }
+
+

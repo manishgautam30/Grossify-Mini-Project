@@ -15,27 +15,27 @@ import com.example.grossifyapp.model.DiscountedProducts;
 
 import java.util.List;
 
-public class DiscountedProductAdapter extends RecyclerView.Adapter<DiscountedProductAdapter.DiscountedProductViewHolder>{
+public class DiscountedProductAdapter extends RecyclerView.Adapter<DiscountedProductAdapter.DiscountedProductViewHolder> {
 
     Context context;
-
     List<DiscountedProducts> discountedProductsList;
-    List dataList;
 
-    public DiscountedProductAdapter(Context context, List<DiscountedProducts> dataList) {
-        this.context= context;
-        this.dataList=dataList;
+    public DiscountedProductAdapter(Context context, List<DiscountedProducts> discountedProductsList) {
+        this.context = context;
+        this.discountedProductsList = discountedProductsList;
     }
 
     @NonNull
     @Override
     public DiscountedProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.discounted_row_items,parent,false);
+
+        View view = LayoutInflater.from(context).inflate(R.layout.discounted_row_items, parent, false);
         return new DiscountedProductViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull DiscountedProductViewHolder holder, int position) {
+
         holder.discountImageView.setImageResource(discountedProductsList.get(position).getImageurl());
 
     }
@@ -43,10 +43,9 @@ public class DiscountedProductAdapter extends RecyclerView.Adapter<DiscountedPro
     @Override
     public int getItemCount() {
         return discountedProductsList.size();
-
     }
 
-    public static class DiscountedProductViewHolder extends RecyclerView.ViewHolder{
+    public static class DiscountedProductViewHolder extends  RecyclerView.ViewHolder{
 
         ImageView discountImageView;
 
@@ -54,8 +53,7 @@ public class DiscountedProductAdapter extends RecyclerView.Adapter<DiscountedPro
             super(itemView);
 
             discountImageView = itemView.findViewById(R.id.discountImage);
+
         }
     }
-
-
 }
