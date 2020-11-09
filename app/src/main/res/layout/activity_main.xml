@@ -145,6 +145,7 @@
         app:layout_constraintTop_toBottomOf="@+id/categoryRecycler" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recently_item"
         android:layout_width="391dp"
         android:layout_height="175dp"
         android:layout_marginTop="16dp"

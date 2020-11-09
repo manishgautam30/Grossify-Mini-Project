@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     RecentlyViewedAdapter recentlyViewedAdapter;
     List<RecentlyViewed> recentlyViewedList;
 
-    TextView allCategory;
+    ImageView allCategory;
 
 
     @Override
