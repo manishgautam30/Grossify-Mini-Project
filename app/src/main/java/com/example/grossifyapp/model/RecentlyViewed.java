@@ -8,7 +8,7 @@ public class RecentlyViewed {
     String unit;
     int imageUrl;
 
-    public RecentlyViewed(String name, String description, String price, String quantity, String unit, int
+    public RecentlyViewed(String name, String description, String price, String quantity, String unit, int card4, int
             imageUrl) {
         this.name = name;
         this.description = description;
