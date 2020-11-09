@@ -1,12 +1,12 @@
 package com.example.grossifyapp.model;
 
-public class AllCategoryModal {
+public class AllCategoryModel {
 
     Integer id;
     Integer imageurl;
 
 
-    public AllCategoryModal(Integer id, Integer imageurl){
+    public AllCategoryModel(Integer id, Integer imageurl){
         this.id = id;
         this.imageurl=imageurl;
     }

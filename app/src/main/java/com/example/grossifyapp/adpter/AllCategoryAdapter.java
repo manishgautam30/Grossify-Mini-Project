@@ -10,16 +10,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.grossifyapp.R;
-import com.example.grossifyapp.model.AllCategoryModal;
+import com.example.grossifyapp.model.AllCategoryModel;
 
 import java.util.List;
 
 public class AllCategoryAdapter extends RecyclerView.Adapter<AllCategoryAdapter.AllCategoryViewHolder> {
 
     Context context;
-    List<AllCategoryModal> categoryList;
+    List<AllCategoryModel> categoryList;
 
-    public AllCategoryAdapter(Context context, List<AllCategoryModal> categoryList) {
+    public AllCategoryAdapter(Context context, List<AllCategoryModel> categoryList) {
         this.context = context;
         this.categoryList = categoryList;
     }
