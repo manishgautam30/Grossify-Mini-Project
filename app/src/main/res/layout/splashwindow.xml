@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="513dp"
+        android:layout_marginBottom="541dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/app_name"
         android:textAlignment="center"
@@ -25,26 +25,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="475dp"
+        android:layout_marginBottom="497dp"
         android:gravity="center_horizontal"
-        android:text="version 1.0.1"
+        android:text="Online Super Market App"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="25sp"
-        android:textStyle="bold" />
+        android:textStyle="bold|italic" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="34dp"
+        android:layout_marginBottom="27dp"
         android:elegantTextHeight="false"
         android:gravity="center_horizontal"
-        android:textAlignment="center"
         android:text="Powered By: GLA University as Mini-Project"
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="20dp"
+        android:textSize="25dp"
         android:textStyle="bold|italic"
         app:autoSizeTextType="none" />
 
