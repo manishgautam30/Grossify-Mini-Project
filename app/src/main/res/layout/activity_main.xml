@@ -123,7 +123,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/allCategoryImage"
         android:layout_width="55dp"
         android:layout_height="32dp"
         android:layout_marginEnd="16dp"
