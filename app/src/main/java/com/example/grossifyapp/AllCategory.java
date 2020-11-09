@@ -66,7 +66,7 @@ public class AllCategory extends AppCompatActivity {
           this.includeEdge=includeEdge;
       }
 
-        public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+      public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
             int position = parent.getChildAdapterPosition(view); // item position
             int column = position % spanCount; // item column
 
@@ -78,14 +78,21 @@ public class AllCategory extends AppCompatActivity {
                     outRect.top = spacing;
                 }
                 outRect.bottom = spacing; // item bottom
-            } else {
+            }
+            else
+                {
                 outRect.left = column * spacing / spanCount; // column * ((1f / spanCount) * spacing)
                 outRect.right = spacing - (column + 1) * spacing / spanCount; // spacing - (column + 1) * ((1f /    spanCount) * spacing)
                 if (position >= spanCount) {
                     outRect.top = spacing; // item top
                 }
             }
-        }
+      }
 
     }
+
+    /**
+     * Converting dp to pixel
+     */
+
 }
