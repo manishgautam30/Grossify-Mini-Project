@@ -31,6 +31,7 @@ public class AllCategoryAdapter extends RecyclerView.Adapter<AllCategoryAdapter.
         return new CategoryViewHolder(view);
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
 
