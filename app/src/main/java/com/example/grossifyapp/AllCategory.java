@@ -7,6 +7,7 @@ import android.util.TypedValue;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -46,6 +47,7 @@ public class AllCategory extends AppCompatActivity {
     }
 
     private void AllCategoryRecycler(List<AllCategoryModal> allCategoryModalList) {
+        this.allCategoryModalList=allCategoryModalList;
     }
 
 
@@ -53,6 +55,8 @@ public class AllCategory extends AppCompatActivity {
 
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 3);
         AllCategoryRecycler.setLayoutManager(layoutManager);
+        AllCategoryRecycler.addItemDecoration(new GridSpacingItemDecoration(4, dpToPx(16), true));
+        AllCategoryRecycler.setItemAnimator(new DefaultItemAnimator());
         allCategoryAdapter=new AllCategoryAdapter(this,allcategoryModalList);
         AllCategoryRecycler.setAdapter(allCategoryAdapter);
     }
@@ -62,7 +66,9 @@ public class AllCategory extends AppCompatActivity {
         private int spacing;
         private boolean includeEdge;
 
-      public void GridSpacingItemDecoration (int spanCount,int spacing ,boolean includeEdge){
+
+
+        public GridSpacingItemDecoration(int spanCount,int spacing ,boolean includeEdge){
           this.spanCount=spanCount;
           this.spacing=spacing;
           this.includeEdge=includeEdge;
