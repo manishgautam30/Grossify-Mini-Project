@@ -74,6 +74,15 @@ public class MainActivity extends AppCompatActivity {
         categoryList.add(new Category(7,R.drawable.ic_baseline_fiber_manual_record_24));
 
 
+        // adding data to model
+        recentlyViewedList = new ArrayList<>();
+        recentlyViewedList.add(new RecentlyViewed("Watermelon", "Watermelon has high water content and also provides some fiber.", "₹ 80", "1", "KG", card4, b4));
+        recentlyViewedList.add(new RecentlyViewed("Papaya", "Papayas are spherical or pear-shaped fruits that can be as long as 20 inches.", "₹ 85", "1", "KG", card3, b3));
+        recentlyViewedList.add(new RecentlyViewed("Strawberry", "The strawberry is a highly nutritious fruit, loaded with vitamin C.", "₹ 30", "1", "KG", card2, b1));
+        recentlyViewedList.add(new RecentlyViewed("Kiwi", "Full of nutrients like vitamin C, vitamin K, vitamin E, folate, and potassium.", "₹ 30", "1", "PC", card1, b2));
+
+
+
         setDiscountedRecycler(discountedProductsList);
         setCategoryRecycler(categoryList);
     }
