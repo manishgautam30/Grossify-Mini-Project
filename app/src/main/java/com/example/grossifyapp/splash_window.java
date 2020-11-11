@@ -44,7 +44,7 @@ public class splash_window extends Activity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(splash_window.this, MainActivity.class);
+                Intent intent = new Intent(splash_window.this, OnBoardingActivity.class);
                 startActivity(intent);
                 finish();
             }
